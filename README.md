@@ -137,20 +137,10 @@ This project is licensed under the **Creative Commons Attribution 4.0 Internatio
 
 ## 📑 Citation
 
-If you find this work useful, please cite [📜our paper](https://doi.org/10.48550/arXiv.2412.01626):
-
-Mozafari, J., Gerhold, F., & Jatowt, A. (2024). WikiHint: A Human-Annotated Dataset for Hint Ranking and Generation. arXiv preprint arXiv:2412.01626.
-
 ### 📄 BibTeX:
 ```bibtex
-@article{mozafari2025wikihinthumanannotateddatasethint,
-      title={WikiHint: A Human-Annotated Dataset for Hint Ranking and Generation}, 
-      author={Jamshid Mozafari and Florian Gerhold and Adam Jatowt},
-      year={2025},
-      eprint={2412.01626},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      doi={10.48550/arXiv.2412.01626}, 
-}
 ```
 
+## 🙏Acknowledgments
+
+Thanks to our contributors and the University of Innsbruck for supporting this project.
