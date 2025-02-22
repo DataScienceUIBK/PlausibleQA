@@ -51,18 +51,6 @@ The dataset is available on [HuggingFace](https://huggingface.co/datasets/Jamshi
 wget "https://huggingface.co/datasets/JamshidJDMY/PlausibleQA/resolve/main/PlausibleQA.json?download=true"
 ```
 
-## **📊 Key Insights from Experiments**
-### **📌 MCQA Performance Evaluation**
-- Evaluated **8 LLMs** (e.g., **LLaMA 3.1 70B, Qwen 2.5 72B, Mistral 7B**).  
-- **Hard distractors** significantly reduced model accuracy compared to easy distractors.  
-- **Qwen 2.5 72B (75.6%)** outperformed other models on **easy distractors**, while **LLaMA 3.1 70B (88.1%)** was best for **hard distractors**.
-
-### **📌 QA Robustness (QARA) Analysis**
-- Measured **LLM ability to reject plausible but incorrect answers**.  
-- **LLaMA 3.1 70B (92.1%)** had the highest robustness, while **Qwen 2.5 72B (91.7%)** followed closely.  
-- Models struggled more with **high-plausibility incorrect answers** compared to low-plausibility ones.  
-- **QARA scores did not correlate with ExactMatch or Contains**, highlighting its role as an independent robustness metric.
-
 ## **📂 Use Cases of PlausibleQA**
 - **Improving MCQA models**:  
   - Helps **generate more realistic and challenging multiple-choice options**.  
