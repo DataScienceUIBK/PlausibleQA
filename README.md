@@ -26,8 +26,6 @@ The dataset is available on [HuggingFace](https://huggingface.co/datasets/Jamshi
 wget "https://huggingface.co/datasets/JamshidJDMY/PlausibleQA/resolve/main/PlausibleQA.json?download=true"
 ```
 
-Here are the key research contributions and insights from the **PlausibleQA** dataset, based on the paper:
-
 ## **🔑 Research Contributions**
 1. **Introduction of PlausibleQA**:  
    - First large-scale QA dataset with explicit **plausibility scores** for incorrect answers.  
