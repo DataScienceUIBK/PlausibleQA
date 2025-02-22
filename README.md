@@ -21,44 +21,64 @@ The dataset is available on [HuggingFace](https://huggingface.co/datasets/Jamshi
 wget "https://huggingface.co/datasets/JamshidJDMY/PlausibleQA/resolve/main/PlausibleQA.json?download=true"
 ```
 
-## 🔬 Dataset Details
-**Source:** The questions are sourced from three major QA datasets:
-- **TriviaQA**
-- **Natural Questions (NQ)**
-- **WebQuestions (WebQ)**
+Here are the key research contributions and insights from the **PlausibleQA** dataset, based on the paper:
 
-Each question has **10 candidate answers** that are annotated with plausibility scores ranging from 0 to 100, along with justifications.
+## **🔑 Research Contributions**
+1. **Introduction of PlausibleQA**:  
+   - First large-scale QA dataset with explicit **plausibility scores** for incorrect answers.  
+   - Comprises **10,000 questions**, **100,000 candidate answers**, and **1,000,000 justifications**.
 
-### ✨ Key Features
-- **Plausibility-Aware MCQA**: Enables generating realistic distractors for multiple-choice question answering (MCQA).
-- **Robustness Evaluation**: Measures model resilience against plausible yet incorrect answers.
-- **Pairwise Answer Comparison**: Provides structured comparisons of candidate answers to refine plausibility assessments.
-- **Human Evaluation**: 1,000,000 justifications validated by human annotators.
+2. **New QA Benchmark for MCQA & QARA**:  
+   - **Multiple-Choice Question Answering (MCQA)**: Facilitates **plausibility-aware distractor generation**.  
+   - **QA Robustness Assessment (QARA)**: Evaluates **LLM resilience against plausible distractors**.  
 
-## 🛠 Usage
-### Load the Dataset
-```python
-import json
+3. **Plausibility Score Annotations**:  
+   - Each answer is assigned a **plausibility score** ranging from **0 to 100**.  
+   - Scores are derived from **listwise ranking** (direct plausibility assignment) and **pairwise comparisons**.  
+   - **Human evaluation** confirms the reliability of the plausibility scores.
 
-with open("PlausibleQA.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
+4. **Dataset Generation Pipeline**:  
+   - Questions are sourced from **TriviaQA, Natural Questions (NQ), and WebQuestions (WebQ)**.  
+   - **LLaMA-3.3-70B** generates 10 candidate answers per question.  
+   - **Pairwise answer comparison** is used to refine plausibility rankings.  
+   - **Question & answer difficulty estimation** is incorporated.
 
-print(data[0])  # View first question
-```
+5. **Comprehensive Human Evaluation**:  
+   - Conducted **pairwise comparisons** for candidate answers.  
+   - Showed **high agreement** with plausibility rankings.  
+   - Confirms that plausibility-aware distractors are more effective than traditional random distractors.
 
-### Example Entry
-```json
-{
-    "id": "Q1",
-    "question": "What color is the live wire in an electric plug?",
-    "correct_answer": "Brown",
-    "candidate_answers": [
-        { "answer": "Red", "plausibility_score": 96.17, "justification": "Red is associated with danger, which might be linked to a live wire." },
-        { "answer": "Yellow", "plausibility_score": 53.41, "justification": "Yellow is used in electrical wiring, but not as commonly for live wires." },
-        { "answer": "Purple", "plausibility_score": 14.96, "justification": "Purple is not commonly used for live wires." }
-    ]
-}
-```
+## **📊 Key Insights from Experiments**
+### **📌 MCQA Performance Evaluation**
+- Evaluated **8 LLMs** (e.g., **LLaMA 3.1 70B, Qwen 2.5 72B, Mistral 7B**).  
+- **Hard distractors** significantly reduced model accuracy compared to easy distractors.  
+- **Qwen 2.5 72B (75.6%)** outperformed other models on **easy distractors**, while **LLaMA 3.1 70B (88.1%)** was best for **hard distractors**.
+
+### **📌 QA Robustness (QARA) Analysis**
+- Measured **LLM ability to reject plausible but incorrect answers**.  
+- **LLaMA 3.1 70B (92.1%)** had the highest robustness, while **Qwen 2.5 72B (91.7%)** followed closely.  
+- Models struggled more with **high-plausibility incorrect answers** compared to low-plausibility ones.  
+- **QARA scores did not correlate with ExactMatch or Contains**, highlighting its role as an independent robustness metric.
+
+## **📂 Use Cases of PlausibleQA**
+- **Improving MCQA models**:  
+  - Helps **generate more realistic and challenging multiple-choice options**.  
+  - Enables **adaptive distractor selection** based on difficulty.
+
+- **Enhancing QA Robustness Assessment**:  
+  - Provides **structured evaluation** of how well LLMs handle **plausible distractors**.  
+  - Can be used for **adversarial QA evaluation**.
+
+- **Fine-tuning LLMs for Better Answer Differentiation**:  
+  - Models can be **trained to better distinguish between correct and plausible answers**.  
+  - Useful for **reducing hallucinations in generative AI**.
+
+- **Contrastive Learning & Negative Example Selection**:  
+  - Helps **contrastive learning tasks** by using plausibility scores for **better negative sample selection**.
+
+- **Automatic Hint Generation & Evaluation**:  
+  - The **entropy of plausibility scores** can be used for **question difficulty estimation**.  
+  - Can be integrated into **educational tools for intelligent tutoring**.
 
 ## 📊 Experiments & Evaluation
 ### MCQA Performance
