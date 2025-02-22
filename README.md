@@ -14,9 +14,6 @@
 - **10,000** questions sourced from **TriviaQA, Natural Questions (NQ), and WebQuestions (WebQ)**.  
 - **100,000** candidate answers, each with **plausibility scores (0–100)**.  
 - **1,000,000** justifications explaining plausibility rankings.  
-- **Designed for**:
-  - **Multiple-Choice Question Answering (MCQA)** → Generating **realistic distractors**.
-  - **QA Robustness Assessment (QARA)** → Evaluating LLM **resilience to misleading but plausible answers**.  
 
 ### **🌟 What Makes PlausibleQA Unique?**
 ✅ **Plausibility-Aware MCQA**: Enables **adaptive distractor selection** based on difficulty.  
