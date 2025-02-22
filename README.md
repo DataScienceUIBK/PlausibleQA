@@ -21,32 +21,6 @@ The dataset is available on [HuggingFace](https://huggingface.co/datasets/Jamshi
 wget "https://huggingface.co/datasets/JamshidJDMY/PlausibleQA/resolve/main/PlausibleQA.json?download=true"
 ```
 
-## 📂 Repository Structure
-```
-│
-├───Experiments
-│   ├───MCQA
-│   │       Gemma 2 9b.json
-│   │       Gemma 2b.json
-│   │       LLAMA 3.1 70b.json
-│   │       LLAMA 3.1 8b.json
-│   │       LLAMA 3.2 3b.json
-│   │       Mistral 7b.json
-│   │       Qwen 2.5 72b.json
-│   │       Qwen 2.5 7b.json
-│   │
-│   └───Robustness
-│           LLAMA 3.1 70b.json
-│           LLAMA 3.1 8b.json
-│           LLAMA 3.2 3b.json
-│           Qwen 2.5 72b.json
-│           Qwen 2.5 7b.json
-│
-└───HumanEvaluation
-    ├───Person 1 - Person 6
-    │       Evaluations (XLSX files per person)
-```
-
 ## 🔬 Dataset Details
 **Source:** The questions are sourced from three major QA datasets:
 - **TriviaQA**
@@ -109,27 +83,74 @@ Models were tested on their ability to correctly reject plausible but incorrect 
 | Qwen 2.5 7B     | 85.4%        |
 | LLaMA 3.1 8B    | 84.5%        |
 
-## 📜 Citation
-If you use PlausibleQA, please cite our work:
-```bibtex
-@inproceedings{mozafari2025plausibleqa,
-  title={Wrong Answers Can Also Be Useful: PlausibleQA - A Large-Scale QA Dataset with Answer Plausibility Scores},
-  author={Mozafari, Jamshid and Abdallah, Abdelrahman and Piryani, Bhawna and Jatowt, Adam},
-  booktitle={Proceedings of SIGIR '25},
-  year={2025}
-}
+## 📂 Repository Structure
+
+```
+📂 WikiHint/                                                # 🗂 Dataset files
+│   ├── 📄 Pipeline.png                                     # 📊 Dataset pipeline visualization
+│   ├── 📄 training.json                                    # 📊 Training dataset (900 questions, 4500 hints)
+│   ├── 📄 test.json                                        # 📊 Test dataset (100 questions, 500 hints)
+│
+├── 📂 Experiments/                                         # 🧪 Model-generated hints
+│   ├── 📄 GPT-4-Vanilla-answer-agnostic.json
+│   ├── 📄 GPT-4-Vanilla-answer-aware.json
+│   ├── 📄 LLaMA-3.1-405b-Vanilla-answer-agnostic.json
+│   ├── 📄 LLaMA-3.1-405b-Vanilla-answer-aware.json
+│   ├── 📄 LLaMA-3.1-70b-FTwA-answer-aware.json
+│   ├── 📄 LLaMA-3.1-70b-FTwoA-answer-agnostic.json
+│   ├── 📄 LLaMA-3.1-70b-Vanilla-answer-agnostic.json
+│   ├── 📄 LLaMA-3.1-70b-Vanilla-answer-aware.json
+│   ├── 📄 LLaMA-3.1-8b-FTwA-answer-aware.json
+│   ├── 📄 LLaMA-3.1-8b-FTwoA-answer-agnostic.json
+│   ├── 📄 LLaMA-3.1-8b-Vanilla-answer-agnostic.json
+│   ├── 📄 LLaMA-3.1-8b-Vanilla-answer-aware.json
+│
+├── 📂 HintRank/                                            # 🏆 Hint ranking method
+│   ├── 📄 EvaluationMethod.png                             # 📊 Visualization of HintRank evaluation method
+│   ├── 📄 hint_rank.py                                     # 📜 HintRank implementation
+│
+├── 📂 HumanEvaluation/                                     # 👨‍🔬 Human evaluation data
+│   ├── 📂 Person_1/  
+│   │   ├── 📑 Part_1.xlsx
+│   │   ├── 📑 Part_2.xlsx
+│   │   ├── 📑 Part_3.xlsx
+│   │   ├── 📑 Part_4.xlsx
+│   │   ├── 📑 Part_5.xlsx
+│   │   ├── 📑 Part_6.xlsx
+│   │   ├── 📑 Part_7.xlsx
+│   │   ├── 📑 Part_8.xlsx
+│   │   ├── 📑 Part_9.xlsx
+│   │   ├── 📑 Part_10.xlsx
+│   │
+│   ├── 📂 Person_2/ (Same structure as Person_1)
+│   ├── 📂 Person_3/ (Same structure as Person_1)
+│   ├── 📂 Person_4/ (Same structure as Person_1)
+│   ├── 📂 Person_5/ (Same structure as Person_1)
+│
+└── 📘 README.md                                            # 📖 This file
 ```
 
-## 📧 Contact
-For questions or contributions, reach out to:
-- **Jamshid Mozafari** - jamshid.mozafari@uibk.ac.at
-- **Abdelrahman Abdallah** - abdelrahman.abdallah@uibk.ac.at
-- **Bhawna Piryani** - bhawna.piryani@uibk.ac.at
-- **Adam Jatowt** - adam.jatowt@uibk.ac.at
+## 📜 License
 
-## ⭐ Contribute
-We welcome contributions! Feel free to open an issue or submit a pull request.
+This project is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. You are free to use, share, and adapt the dataset with proper attribution.
 
----
-**PlausibleQA** is a resource to enhance QA research and robustness in LLMs. 🚀
+
+## 📑 Citation
+
+If you find this work useful, please cite [📜our paper](https://doi.org/10.48550/arXiv.2412.01626):
+
+Mozafari, J., Gerhold, F., & Jatowt, A. (2024). WikiHint: A Human-Annotated Dataset for Hint Ranking and Generation. arXiv preprint arXiv:2412.01626.
+
+### 📄 BibTeX:
+```bibtex
+@article{mozafari2025wikihinthumanannotateddatasethint,
+      title={WikiHint: A Human-Annotated Dataset for Hint Ranking and Generation}, 
+      author={Jamshid Mozafari and Florian Gerhold and Adam Jatowt},
+      year={2025},
+      eprint={2412.01626},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      doi={10.48550/arXiv.2412.01626}, 
+}
+```
 
