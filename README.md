@@ -20,13 +20,7 @@
 ✅ **LLM Robustness Evaluation**: Measures a model’s ability to **reject misleading but plausible answers**.  
 ✅ **Pairwise Answer Comparisons**: Provides structured **ranking of incorrect answers** to refine **plausibility assessments**.  
 
-## 📥 Dataset Download
-The dataset is available on [HuggingFace](https://huggingface.co/datasets/JamshidJDMY/PlausibleQA):
-```
-wget "https://huggingface.co/datasets/JamshidJDMY/PlausibleQA/resolve/main/PlausibleQA.json?download=true"
-```
-
-## **🔑 Research Contributions**
+### **🔑 Research Contributions**
 1. **Introduction of PlausibleQA**:  
    - First large-scale QA dataset with explicit **plausibility scores** for incorrect answers.  
    - Comprises **10,000 questions**, **100,000 candidate answers**, and **1,000,000 justifications**.
@@ -50,6 +44,12 @@ wget "https://huggingface.co/datasets/JamshidJDMY/PlausibleQA/resolve/main/Plaus
    - Conducted **pairwise comparisons** for candidate answers.  
    - Showed **high agreement** with plausibility rankings.  
    - Confirms that plausibility-aware distractors are more effective than traditional random distractors.
+   
+## 📥 Dataset Download
+The dataset is available on [HuggingFace](https://huggingface.co/datasets/JamshidJDMY/PlausibleQA):
+```
+wget "https://huggingface.co/datasets/JamshidJDMY/PlausibleQA/resolve/main/PlausibleQA.json?download=true"
+```
 
 ## **📊 Key Insights from Experiments**
 ### **📌 MCQA Performance Evaluation**
