@@ -71,29 +71,6 @@ wget "https://huggingface.co/datasets/JamshidJDMY/PlausibleQA/resolve/main/Plaus
   - The **entropy of plausibility scores** can be used for **question difficulty estimation**.  
   - Can be integrated into **educational tools for intelligent tutoring**.
 
-## 📊 Experiments & Evaluation
-### MCQA Performance
-LLMs were evaluated on multiple-choice question answering using **hard** and **easy** distractors from PlausibleQA. Results:
-
-| Model             | Hard (w/ Answer) | Hard (wo/ Answer) | Easy (w/ Answer) | Easy (wo/ Answer) |
-|------------------|----------------|-----------------|----------------|-----------------|
-| LLaMA 3.1 70B   | **88.1%**       | 83.3%          | 72.0%          | 67.4%          |
-| Qwen 2.5 72B    | 85.4%           | **83.3%**      | **75.6%**      | **71.2%**      |
-| Mistral 7B      | 71.2%           | 63.2%          | 49.0%          | 39.5%          |
-| LLaMA 3.2 3B    | 63.2%           | 58.5%          | 39.5%          | 29.0%          |
-| Gemma 2B        | 13.8%           | 14.9%          | 9.4%           | 3.2%           |
-
-### QA Robustness (QARA)
-Models were tested on their ability to correctly reject plausible but incorrect answers.
-
-| Model             | QARA Score (%) |
-|------------------|--------------|
-| LLaMA 3.1 70B   | **92.1%**    |
-| Qwen 2.5 72B    | 91.7%        |
-| LLaMA 3.2 3B    | 91.6%        |
-| Qwen 2.5 7B     | 85.4%        |
-| LLaMA 3.1 8B    | 84.5%        |
-
 ## 📜 License
 
 This project is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. You are free to use, share, and adapt the dataset with proper attribution.
