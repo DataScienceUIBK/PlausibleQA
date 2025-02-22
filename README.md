@@ -3,7 +3,8 @@
 ![License](https://img.shields.io/badge/license-Apache_2.0-blue.svg)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-dataset-important)
 
-## Overview
+<img src="https://raw.githubusercontent.com/DataScienceUIBK/PlausibleQA/main/Images/Pipeline.png">
+
 **PlausibleQA** is a large-scale QA dataset designed to evaluate and enhance the ability of Large Language Models (LLMs) in distinguishing between correct and highly plausible incorrect answers. Unlike traditional QA datasets that primarily focus on correctness, PlausibleQA provides candidate answers annotated with plausibility scores and justifications.
 
 - **10,000** questions
