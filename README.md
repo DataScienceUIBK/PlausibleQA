@@ -94,53 +94,6 @@ Models were tested on their ability to correctly reject plausible but incorrect 
 | Qwen 2.5 7B     | 85.4%        |
 | LLaMA 3.1 8B    | 84.5%        |
 
-## 📂 Repository Structure
-
-```
-📂 WikiHint/                                                # 🗂 Dataset files
-│   ├── 📄 Pipeline.png                                     # 📊 Dataset pipeline visualization
-│   ├── 📄 training.json                                    # 📊 Training dataset (900 questions, 4500 hints)
-│   ├── 📄 test.json                                        # 📊 Test dataset (100 questions, 500 hints)
-│
-├── 📂 Experiments/                                         # 🧪 Model-generated hints
-│   ├── 📄 GPT-4-Vanilla-answer-agnostic.json
-│   ├── 📄 GPT-4-Vanilla-answer-aware.json
-│   ├── 📄 LLaMA-3.1-405b-Vanilla-answer-agnostic.json
-│   ├── 📄 LLaMA-3.1-405b-Vanilla-answer-aware.json
-│   ├── 📄 LLaMA-3.1-70b-FTwA-answer-aware.json
-│   ├── 📄 LLaMA-3.1-70b-FTwoA-answer-agnostic.json
-│   ├── 📄 LLaMA-3.1-70b-Vanilla-answer-agnostic.json
-│   ├── 📄 LLaMA-3.1-70b-Vanilla-answer-aware.json
-│   ├── 📄 LLaMA-3.1-8b-FTwA-answer-aware.json
-│   ├── 📄 LLaMA-3.1-8b-FTwoA-answer-agnostic.json
-│   ├── 📄 LLaMA-3.1-8b-Vanilla-answer-agnostic.json
-│   ├── 📄 LLaMA-3.1-8b-Vanilla-answer-aware.json
-│
-├── 📂 HintRank/                                            # 🏆 Hint ranking method
-│   ├── 📄 EvaluationMethod.png                             # 📊 Visualization of HintRank evaluation method
-│   ├── 📄 hint_rank.py                                     # 📜 HintRank implementation
-│
-├── 📂 HumanEvaluation/                                     # 👨‍🔬 Human evaluation data
-│   ├── 📂 Person_1/  
-│   │   ├── 📑 Part_1.xlsx
-│   │   ├── 📑 Part_2.xlsx
-│   │   ├── 📑 Part_3.xlsx
-│   │   ├── 📑 Part_4.xlsx
-│   │   ├── 📑 Part_5.xlsx
-│   │   ├── 📑 Part_6.xlsx
-│   │   ├── 📑 Part_7.xlsx
-│   │   ├── 📑 Part_8.xlsx
-│   │   ├── 📑 Part_9.xlsx
-│   │   ├── 📑 Part_10.xlsx
-│   │
-│   ├── 📂 Person_2/ (Same structure as Person_1)
-│   ├── 📂 Person_3/ (Same structure as Person_1)
-│   ├── 📂 Person_4/ (Same structure as Person_1)
-│   ├── 📂 Person_5/ (Same structure as Person_1)
-│
-└── 📘 README.md                                            # 📖 This file
-```
-
 ## 📜 License
 
 This project is licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. You are free to use, share, and adapt the dataset with proper attribution.
