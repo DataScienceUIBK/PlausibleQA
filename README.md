@@ -78,9 +78,8 @@ This project is licensed under the **Creative Commons Attribution 4.0 Internatio
 
 ## 📑 Citation
 
-### 📄 BibTeX:
-```bibtex
-```
+The official publication details for this dataset will be announced soon. Please check back later for information on how to cite PlausibleQA.
+
 
 ## 🙏Acknowledgments
 
