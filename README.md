@@ -8,13 +8,15 @@
 
 **PlausibleQA** is a large-scale QA dataset designed to evaluate and enhance the ability of Large Language Models (LLMs) in distinguishing between correct and highly plausible incorrect answers. Unlike traditional QA datasets that primarily focus on correctness, PlausibleQA provides candidate answers annotated with plausibility scores and justifications.
 
+## 🗂 Overview
+
 - **10,000** questions
 - **100,000** candidate answers with plausibility scores
 - **1,000,000** justifications
 - **Designed for MCQA and QA Robustness Assessment (QARA)**
 
 ## 📥 Dataset Download
-The dataset is available on [Hugging Face](https://huggingface.co/datasets/JamshidJDMY/PlausibleQA):
+The dataset is available on [HuggingFace](https://huggingface.co/datasets/JamshidJDMY/PlausibleQA):
 ```
 wget "https://huggingface.co/datasets/JamshidJDMY/PlausibleQA/resolve/main/PlausibleQA.json?download=true"
 ```
