@@ -80,10 +80,19 @@ This project is licensed under the **Creative Commons Attribution 4.0 Internatio
 
 If you find this work useful, please cite [📜our paper]():
 ### Plain
-
+Mozafari, J., Abdallah, A., Piryani, B., & Jatowt, A. (2025). Wrong Answers Can Also Be Useful: PlausibleQA -- A Large-Scale QA Dataset with Answer Plausibility Scores. arXiv [Cs.CL]. doi:10.48550/arXiv.2502.16358
 ### Bibtex
 ```bibtex
-
+@article{mozafari2025wronganswersusefulplausibleqa,
+      title={Wrong Answers Can Also Be Useful: PlausibleQA -- A Large-Scale QA Dataset with Answer Plausibility Scores}, 
+      author={Jamshid Mozafari and Abdelrahman Abdallah and Bhawna Piryani and Adam Jatowt},
+      year={2025},
+      eprint={2502.16358},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2502.16358},
+      doi={10.48550/arXiv.2502.16358} 
+}
 ```
 
 
